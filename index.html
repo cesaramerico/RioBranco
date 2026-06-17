@@ -1,12 +1,128 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Sítio Rio Branco</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sítio Rio Branco | Em Breve</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+}
+
+.container{
+    text-align:center;
+    max-width:800px;
+    width:90%;
+    padding:50px;
+}
+
+.logo{
+    width:220px;
+    max-width:80%;
+    margin-bottom:40px;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.2));
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:24px;
+    padding:50px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+p{
+    font-size:1.2rem;
+    line-height:1.8;
+    color:rgba(255,255,255,.9);
+}
+
+.badge{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 28px;
+    border-radius:50px;
+    background:#ffffff;
+    color:#2e7d32;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+footer{
+    margin-top:35px;
+    color:rgba(255,255,255,.7);
+    font-size:.95rem;
+}
+
+@media(max-width:768px){
+    h1{
+        font-size:2.2rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    .card{
+        padding:35px 25px;
+    }
+}
+</style>
+
 </head>
 <body>
-<h1>Sítio Rio Branco</h1>
-<p>Hello World!</p>
-<p>Produtos Caipiras de Qualidade</p>
+
+<div class="container">
+
+    <!-- SUBSTITUA PELO NOME DO SEU LOGOTIPO -->
+    <img src="imagens/logo_sitio_v2.png" alt="Sítio Rio Branco" class="logo">
+
+    <div class="card">
+
+        <h1>🌱 Sítio Rio Branco 🌱</h1>
+
+        <p>
+            Nosso novo site está em desenvolvimento.
+        </p>
+
+        <p>
+            Em breve você poderá conhecer nossos produtos artesanais,
+            acompanhar novidades e entrar em contato conosco de forma rápida e prática.
+        </p>
+
+        <div class="badge">
+            EM BREVE
+        </div>
+
+        <footer>
+            © 2026 Sítio Rio Branco • Produção Artesanal e Caipira
+        </footer>
+
+    </div>
+
+</div>
+
 </body>
 </html>
+```
