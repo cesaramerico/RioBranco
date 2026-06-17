@@ -2,11 +2,224 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Sítio Rio Branco</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sítio Rio Branco | Produtos Caipiras de Qualidade</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#333;
+}
+
+header{
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1600');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:15px 30px;
+    margin-top:20px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#2e7d32;
+}
+
+.produtos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+    background:white;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.preco{
+    color:#2e7d32;
+    font-size:1.4rem;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.sobre{
+    background:#f8f8f8;
+    text-align:center;
+}
+
+footer{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+</style>
 </head>
+
 <body>
-<h1>Sítio Rio Branco</h1>
-<p>Hello World!</p>
-<p>Produtos Caipiras de Qualidade</p>
+
+<header>
+    <h1>Sítio Rio Branco</h1>
+    <p>Produtos Caipiras de Qualidade Direto do Produtor</p>
+
+    <a class="btn" href="https://wa.me/55SEUNUMERO">
+        Fazer Pedido pelo WhatsApp
+    </a>
+</header>
+
+<section class="sobre">
+    <h2>Quem Somos</h2>
+    <p>
+        O Sítio Rio Branco produz alimentos artesanais com qualidade,
+        tradição e sabor da roça. Trabalhamos com produtos selecionados,
+        produzidos com cuidado para levar o melhor até sua mesa.
+    </p>
+</section>
+
+<section>
+    <h2>Nossos Produtos</h2>
+
+    <div class="produtos">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800">
+            <div class="card-content">
+                <h3>Linguiça Pura de Porco Caipira</h3>
+                <p>Produção artesanal com carne selecionada.</p>
+                <div class="preco">R$ 35,00/kg</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?w=800">
+            <div class="card-content">
+                <h3>Polpa Pura de Maracujá</h3>
+                <p>100% natural, sem conservantes.</p>
+                <div class="preco">R$ 27,00/kg</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800">
+            <div class="card-content">
+                <h3>Mel Puro Silvestre</h3>
+                <p>Mel natural e saboroso.</p>
+                <div class="preco">R$ 19,00 (300g)</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=800">
+            <div class="card-content">
+                <h3>Franga e Galinha Caipira</h3>
+                <p>Criação tradicional e alimentação natural.</p>
+                <div class="preco">Consulte Disponibilidade</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="sobre">
+    <h2>Atendimento</h2>
+
+    <p>
+        📍 São José do Rio Preto e Região<br>
+        🚚 Entregas sob consulta<br>
+        📱 Pedidos pelo WhatsApp
+    </p>
+
+    <br>
+
+    <a class="btn" href="https://wa.me/55SEUNUMERO">
+        Solicitar Orçamento
+    </a>
+</section>
+
+<footer>
+    <h3>Sítio Rio Branco</h3>
+    <p>Produtos Caipiras de Qualidade</p>
+    <br>
+    <p>
+        WhatsApp:
+        <a href="https://wa.me/55SEUNUMERO">(11) 98534-5050</a>
+    </p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/55SEUNUMERO">
+📞
+</a>
+
 </body>
 </html>
