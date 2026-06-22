@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Pagamento | Sítio Rio Branco</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/logo.png" height="80">
+</div>
+
+<nav>
+
+<a href="index.html">Início</a>
+<a href="index.html#produtos">Produtos</a>
+<a href="pagamento.html">Pagamento</a>
+<a href="delivery.html">Delivery</a>
+
+</nav>
+
+</header>
+
+<section class="pagamento">
+
+<h1>Finalize seu Pedido</h1>
+
+<p>
+
+Consulte seu frete antes de finalizar seu pagamento. Encaminhar o comprovante pelo canal do whats app para acompanhar a entrega dos produtos.
+
+</p>
+
+<div class="opcoes">
+
+<div class="opcao">
+
+<img src="images/qrcode-pix.png" width="220">
+
+<p>
+
+ou copie a chave:
+
+</p>
+
+<input
+type="text"
+value="1bd34aab-32bd-42fd-9cf8-c283c9ab5a80"
+readonly>
+
+<button onclick="copiarPix()">
+
+Copiar Chave PIX
+
+</button>
+
+</div>
+
+<div class="opcao">
+
+<h2>Cartão</h2>
+
+<p>
+
+Aceitamos Visa, Mastercard, Elo, Hipercard e outras.
+
+</p>
+
+<a
+class="botaoMercado"
+href="https://link.mercadopago.com.br/sitioriobranco"
+target="_blank">
+
+Pagar com Mercado Pago
+
+</a>
+
+</div>
+
+<div class="opcao">
+
+<h2>WhatsApp</h2>
+
+<p>
+
+Prefere atendimento?
+
+</p>
+
+<a
+class="botaoWhatsapp"
+href="https://wa.me/5511985345020">
+
+Falar com um Vendedor
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function copiarPix(){
+
+const campo=document.querySelector("input");
+
+campo.select();
+
+document.execCommand("copy");
+
+alert("Chave PIX copiada!");
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,125 +1,247 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sítio Rio Branco | Em Breve</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<title>Sítio Rio Branco | Produtos Caipiras</title>
 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1b5e20, #2e7d32);
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    overflow-y: hidden;
-}
+<link rel="stylesheet" href="style.css">
 
-.container{
-    text-align:center;
-    max-width:800px;
-    width:90%;
-    padding:50px;
-}
-
-.logo{
-    width:240px;
-    max-width:80%;
-    margin-bottom:10px;
-    margin-top: -40px;
-    filter: drop-shadow(0 10px 10px rgba(0,0,0,.2));
-}
-
-.card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:24px;
-    padding:15px;
-    box-shadow:0 15px 40px rgba(0,0,0,.2);
-}
-
-h1{
-    font-size:3rem;
-    margin-bottom:20px;
-    font-weight:700;
-}
-
-p{
-    font-size:1.2rem;
-    line-height:1.8;
-    color:rgba(255,255,255,.9);
-}
-
-.badge{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 28px;
-    border-radius:50px;
-    background:#ffffff;
-    color:#2e7d32;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-footer{
-    margin-top:35px;
-    color:rgba(255,255,255,.7);
-    font-size:.95rem;
-}
-
-@media(max-width:768px){
-    h1{
-        font-size:2.2rem;
-    }
-
-    p{
-        font-size:1rem;
-    }
-
-    .card{
-        padding:35px 25px;
-    }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
-<div class="container">
+<header>
 
-    <!-- SUBSTITUA PELO NOME DO SEU LOGOTIPO -->
-    <img src="images/logo_sitio_v3.png" alt="Sítio Rio Branco" class="logo">
+<div class="logo">
+<img src="images/logo.png">
+</div>
 
-    <div class="card">
+<nav>
 
-        <h1>🌱 Sítio Rio Branco 🌱</h1>
+<a href="#inicio">Início</a>
+<a href="#produtos">Produtos</a>
+<a href="#sobre">Sobre</a>
+<a href="pagamento.html">Pagamento</a>
+<a href="delivery.html">Delivery</a>
 
-        <p>
-            Nosso novo site está em desenvolvimento.
-            Em breve você poderá conhecer nossos produtos artesanais,
-            acompanhar novidades e entrar em contato conosco de forma rápida e prática.
-        </p>
+</nav>
 
-        <div class="badge">
-            EM BREVE
-        </div>
+</header>
 
-        <footer>
-            © 2026 Sítio Rio Branco • Produção Artesanal e Caipira
-        </footer>
+<section class="hero" id="inicio">
 
-    </div>
+<h1>Produtos Caipiras Direto do Produtor</h1>
+
+<p>
+</p>
+
+<a href="https://wa.me/5511985345020" class="botao">
+Fazer Pedido
+</a>
+
+</section>
+
+<section class="produtos" id="produtos">
+
+<h1>Nossos Produtos</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="images/linguica.jpg">
+
+<h3>Linguiça Pura de Porco</h3>
+
+<p>
+
+100% carne suína.
+
+Sem carne mecanicamente separada.
+
+Produção artesanal.
+
+</p>
+
+<h4>R$35/kg</h4>
+
+<a href="https://wa.me/5511985345020?text=Olá! Quero comprar Linguiça Caipira">
+Comprar
+</a>
 
 </div>
+
+<div class="card">
+
+<img src="images/maracuja.png">
+
+<h3>Polpa de Maracujá</h3>
+
+<p>
+
+100% fruta.
+
+Sem conservantes.
+
+Congelada.
+
+</p>
+
+<h4>
+
+250g R$7
+
+<br>
+
+1kg R$27
+
+</h4>
+
+<a href="https://wa.me/5511985345020?text=Olá! Quero comprar Polpa de Maracujá">
+
+Comprar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="images/mel.png">
+
+<h3>Mel 100% Puro</h3>
+
+<p>
+
+Mel de Europa floradas naturais.
+
+Direto do produtor.
+
+</p>
+
+<h4>
+
+300g R$19
+
+<br>
+
+3 por R$50
+
+</h4>
+
+<a href="https://wa.me/5511985345020?text=Olá! Quero comprar Mel">
+
+Comprar
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="sobre" id="sobre">
+
+<h2>Quem Somos</h2>
+
+<p>
+
+O Sítio Rio Branco está localizado no município de São Pedro do Turvo-SP. Produzimos alimentos naturais e artesanais,
+levando qualidade diretamente da roça até sua mesa.
+
+</p>
+
+</section>
+
+<section class="pagamento">
+
+<h2>Pagamento Seguro</h2>
+
+<p>
+
+Aceitamos PIX, Cartão e Mercado Pago.
+
+</p>
+
+<a href="https://link.mercadopago.com.br/sitioriobranco" class="mercado">
+
+Pagar com Mercado Pago
+
+</a>
+
+</section>
+
+<section class="depoimentos">
+
+<h2>Clientes Satisfeitos</h2>
+
+<div class="comentarios">
+
+<div>
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+"A melhor linguiça que já comprei."
+
+</p>
+
+</div>
+
+<div>
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+"O mel é excelente!"
+
+</p>
+
+</div>
+
+<div>
+
+⭐⭐⭐⭐⭐
+
+<p>
+
+"Polpa muito saborosa."
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="contato">
+
+<h3>Sítio Rio Branco</h3>
+
+<p>WhatsApp</p>
+
+<a href="https://wa.me/5511985345020">
+
+(11)98534-5020
+
+</a>
+
+<p>
+
+©2026
+
+</p>
+
+</footer>
 
 <!-- Botão WhatsApp -->
 <a href="https://api.whatsapp.com/send?phone=5511985345020&text=Olá,%20quero%20fazer%20um%20pedido"
@@ -143,17 +265,14 @@ footer{
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 0px rgba(0,0,0,0.3);
 }
 </style>
-
-
 
 <a href="https://www.instagram.com/sitio_rio_branco/" target="_blank" aria-label="Instagram" style="position: fixed; left: 20px; bottom: 20px; z-index: 9999;">
   <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 50px; height: 50px;">
 </a>
 
-
-
 </body>
+
 </html>
