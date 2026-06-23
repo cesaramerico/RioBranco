@@ -7,6 +7,12 @@
 
 <title>Sítio Rio Branco | Produtos Caipiras</title>
 
+<meta name="description" 
+	  content="Polpa pura de Maracujá, produtos caipiras e produzidos no Sítio Rio Branco. Qualidade, tradição e entrega para o noroeste paulista.">
+	  
+<meta name="keywords"
+          content="polpa de maracujá, linguiça caipira, banha de porco, produtos caipiras, frango caipira, Sítio Rio Branco">
+
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -18,7 +24,8 @@
 <header>
 
 <div class="logo">
-<img src="images/logo.png">
+<img src="images/logo.png"
+     alt="Logotipo do Sítio Rio Branco">
 </div>
 
 <nav>
@@ -54,15 +61,24 @@ Fazer Pedido
 
 <div class="card">
 
-<img src="images/linguica.jpg">
+<div class="galeria">
 
-<h3>Linguiça Pura de Porco</h3>
+	<img src="images/linguica.jpg"
+		 alt="Linguiça Fina artesanal pura de porco produzida pelo Sítio Rio Branco"
+	     class="ativa">
+
+	<img src="images/linguica_grossa.jpg"
+		 alt="Linguiça Grossa artesanal pura de porco produzida pelo Sítio Rio Branco">
+	
+ </div>
+
+<h3>Linguiça Pura de Porco Caipira</h3>
 
 <p>
 
 100% carne suína.
 
-Sem carne mecanicamente separada.
+Sem carne mecanicamente separada.<br>
 
 Produção artesanal.
 
@@ -78,7 +94,8 @@ Comprar
 
 <div class="card">
 
-<img src="images/maracuja.png">
+<img src="images/maracuja.png"
+	 alt="Polpa pura de maracujá produzida pelo Sítio Rio Branco">
 
 <h3>Polpa de Maracujá</h3>
 
@@ -89,6 +106,8 @@ Comprar
 Sem conservantes.
 
 Congelada.
+
+<br>
 
 </p>
 
@@ -112,7 +131,8 @@ Comprar
 
 <div class="card">
 
-<img src="images/mel.png">
+<img src="images/mel.png"
+		alt="Mel Puro de Europa produzido pelo Sítio Rio Branco">
 
 <h3>Mel 100% Puro</h3>
 
@@ -135,6 +155,63 @@ Direto do produtor.
 </h4>
 
 <a href="https://wa.me/5511985345020?text=Olá! Quero comprar Mel">
+
+Comprar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="images/mandioca.jpg"
+	alt="Mandioca Amarela descascada congelada sem agrotóxico produzida pelo Sítio Rio Branco">
+
+<h3>Mandioca Amarela Descascada</h3>
+
+<p>
+
+Descascada Congelada - Pacotes 1kg
+
+</p>
+
+<h4>
+
+R$8/kg
+
+</h4>
+
+<a href="https://wa.me/5511985345020?text=Olá! Quero comprar Mandioca Amarela">
+
+Comprar
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<img src="images/frango.jpg"
+	alt="Frango Caipira Legítimo produzido pelo Sítio Rio Branco">
+
+<h3>Frango Caipira Legítimo</h3>
+
+<p>
+
+Verdadeiro Caipira - Limpo, Congelado e com miúdos.
+
+Peso variável - Consulte
+
+</p>
+
+<h4>
+
+R$85/uni
+
+</h4>
+
+<a href="https://wa.me/5511985345020?text=Olá! Quero comprar Frango Caipira">
 
 Comprar
 
@@ -272,6 +349,31 @@ Pagar com Mercado Pago
 <a href="https://www.instagram.com/sitio_rio_branco/" target="_blank" aria-label="Instagram" style="position: fixed; left: 20px; bottom: 20px; z-index: 9999;">
   <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 50px; height: 50px;">
 </a>
+
+<script>
+
+document.querySelectorAll(".galeria").forEach(galeria=>{
+
+    let imagens=galeria.querySelectorAll("img");
+    let indice=0;
+
+    setInterval(()=>{
+
+        imagens[indice].classList.remove("ativa");
+
+        indice++;
+
+        if(indice>=imagens.length)
+            indice=0;
+
+        imagens[indice].classList.add("ativa");
+
+    },3000);
+
+});
+
+</script>
+
 
 </body>
 
