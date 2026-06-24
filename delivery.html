@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Pagamento | Sítio Rio Branco</title>
+
+<meta name="description"
+      content="Finalize sua compra com segurança utilizando PIX, cartão de crédito ou Mercado Pago no Sítio Rio Branco.">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/logo.png" height="80">
+</div>
+
+<nav>
+
+<a href="index.html">Início</a>
+<a href="index.html#produtos">Produtos</a>
+<a href="delivery.html">Delivery</a>
+
+</nav>
+
+</header>
+
+<section class="pagamento">
+
+<h1>Faça seu Pedido</h1>
+
+<p>
+
+Nosso loja virtual ainda está em desenvolvimento, mas você já pode consultar seu frete e finalizar seu pagamento. 
+Para concluir o pedido, favor encaminhar pelo whatsapp o comprovante do valor do seu(s) produto(s) + o frete consultado,
+e receba a confirmação de compra.
+
+</p>
+
+<div class="delivery-container">
+
+    <h1>Verificar Entrega</h1>
+
+    <p class="subtitulo">Digite seu CEP para consultar disponibilidade</p>
+
+    <div class="cep-box">
+        <input type="text" id="cep" placeholder="00000-000">
+        <button onclick="verificarCEP()">Verificar</button>
+    </div>
+
+    <p id="resultado-cep"></p>
+
+</div>
+
+<div class="opcoes">
+
+<div class="opcao">
+
+<img src="images/qrcode-pix.png" width="220">
+
+<p>
+
+ou copie a chave:
+
+</p>
+
+<input
+type="text"
+value="1bd34aab-32bd-42fd-9cf8-c283c9ab5a80"
+readonly>
+
+<button onclick="copiarPix()">
+
+Copiar Chave PIX
+
+</button>
+
+</div>
+
+<div class="opcao">
+
+<h2>Cartão</h2>
+
+<p>
+
+Aceitamos Visa, Mastercard, Elo, Hipercard e outras.
+
+</p>
+
+<a
+class="botaoMercado"
+href="https://link.mercadopago.com.br/sitioriobranco"
+target="_blank">
+
+Pagar com Mercado Pago
+
+</a>
+
+</div>
+
+<div class="opcao">
+
+<h2>WhatsApp</h2>
+
+<p>
+
+Precisa de ajuda?
+
+</p>
+
+<a
+class="botaoWhatsapp"
+href="https://wa.me/5511985345020">
+
+Falar com um Vendedor
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function copiarPix(){
+
+const campo=document.querySelector("input");
+
+campo.select();
+
+document.execCommand("copy");
+
+alert("Chave PIX copiada!");
+
+}
+
+</script>
+
+
+<!-- Botão WhatsApp -->
+<a href="https://api.whatsapp.com/send?phone=5511985345020&text=Olá,%20quero%20fazer%20um%20pedido"
+   target="_blank"
+   class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp">
+</a>
+
+
+<script>
+function verificarCEP() {
+    let cep = document.getElementById("cep").value.replace(/\D/g, "");
+    let resultado = document.getElementById("resultado-cep");
+
+    if (cep.length !== 8) {
+        resultado.innerText = "CEP inválido.";
+        return;
+    }
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.json())
+        .then(data => {
+
+            if (data.erro) {
+                resultado.innerText = "CEP não encontrado.";
+                return;
+            }
+
+            // EXEMPLO: definir regiões atendidas
+            let cidadesAtendidas = [
+                "São José do Rio Preto",
+                "Mirassol",
+                "Bady Bassitt"
+            ];
+
+            if (data.localidade === "São José do Rio Preto") {
+
+    resultado.innerText =
+        `Entrega disponível para ${data.localidade} ✔️ Frete R$25`;
+
+} else if (data.localidade === "Mirassol") {
+
+    resultado.innerText =
+        `Entrega disponível para ${data.localidade} ✔️ Frete R$35`;
+
+} else if (data.localidade === "Bady Bassitt") {
+
+    resultado.innerText =
+        `Entrega disponível para ${data.localidade} ✔️ Frete R$45`;
+
+} else {
+
+    resultado.innerText =
+        `Desculpe, não entregamos para ${data.localidade} ❌`;
+
+}
+        })
+        .catch(() => {
+            resultado.innerText = "Erro ao consultar CEP.";
+        });
+}
+</script>
+
+<style>
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    z-index: 9999;
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.3);
+}
+</style>
+
+</body>
+
+</html>
