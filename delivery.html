@@ -29,7 +29,6 @@
 
 <a href="index.html">Início</a>
 <a href="index.html#produtos">Produtos</a>
-<a href="delivery.html">Delivery</a>
 
 </nav>
 
@@ -187,22 +186,22 @@ function verificarCEP() {
             if (data.localidade === "São José do Rio Preto") {
 
     resultado.innerText =
-        `Entrega disponível para ${data.localidade} ✔️ Frete R$25`;
+        `1 dia útil para ${data.localidade}-${data.logradouro} ✔️ R$25 Motoboy`;
 
 } else if (data.localidade === "Mirassol") {
 
     resultado.innerText =
-        `Entrega disponível para ${data.localidade} ✔️ Frete R$35`;
+        `Até 2 dias úteis para ${data.localidade}-${data.logradouro} ✔️ R$35 Motoboy`;
 
 } else if (data.localidade === "Bady Bassitt") {
 
     resultado.innerText =
-        `Entrega disponível para ${data.localidade} ✔️ Frete R$45`;
+        `Até 3 dias úteis para ${data.localidade}-${data.logradouro} ✔️ R$39 Motoboy`;
 
 } else {
 
     resultado.innerText =
-        `Desculpe, não entregamos para ${data.localidade} ❌`;
+        `Desculpe, ainda não entregamos para ${data.localidade} ❌ - Volte em breve`;
 
 }
         })
