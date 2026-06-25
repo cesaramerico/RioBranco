@@ -72,17 +72,20 @@ margin:20px;
 
 .botao{
 
-background:#ff9800;
+  background: linear-gradient(135deg, #ff9800, #ff6d00);
+  padding: 16px 44px;
+  border-radius: 50px;
 
-padding:18px 40px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 
-border-radius:40px;
+  display: inline-block;
+  transition: all 0.25s ease;
 
-text-decoration:none;
-
-color:white;
-
-font-size:22px;
+  box-shadow: 0 6px 18px rgba(255, 152, 0, 0.35);
 
 }
 
