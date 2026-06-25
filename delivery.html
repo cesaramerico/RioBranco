@@ -41,7 +41,7 @@
 <p>
 
 Nosso loja virtual ainda está em desenvolvimento, mas você já pode consultar seu frete e finalizar seu pagamento. 
-Para concluir o pedido, favor encaminhar pelo whatsapp o comprovante do valor do seu(s) produto(s) + o frete consultado,
+Para concluir o pedido, favor encaminhar pelo whatsapp o comprovante do valor do seu(s) produto(s) + o frete consultado, CPF
 e receba a confirmação de compra.
 
 </p>
@@ -148,15 +148,6 @@ alert("Chave PIX copiada!");
 </script>
 
 
-<!-- Botão WhatsApp -->
-<a href="https://api.whatsapp.com/send?phone=5511985345020&text=Olá,%20quero%20fazer%20um%20pedido"
-   target="_blank"
-   class="whatsapp-button">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-         alt="WhatsApp">
-</a>
-
-
 <script>
 function verificarCEP() {
     let cep = document.getElementById("cep").value.replace(/\D/g, "");
@@ -186,7 +177,7 @@ function verificarCEP() {
             if (data.localidade === "São José do Rio Preto") {
 
     resultado.innerText =
-        `1 dia útil para ${data.localidade}-${data.logradouro} ✔️ R$25 Motoboy`;
+        `1 dia útil para ${data.localidade}-${data.logradouro} ✔️ R$20 Motoboy`;
 
 } else if (data.localidade === "Mirassol") {
 
@@ -210,6 +201,14 @@ function verificarCEP() {
         });
 }
 </script>
+
+<!-- Botão WhatsApp -->
+<a href="https://api.whatsapp.com/send?phone=5511985345020&text=Olá,%20quero%20fazer%20um%20pedido"
+   target="_blank"
+   class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp">
+</a>
 
 <style>
 .whatsapp-button {
