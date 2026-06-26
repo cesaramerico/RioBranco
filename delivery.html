@@ -19,20 +19,29 @@
 
 <body>
 
-<header>
+<header class="topo-integrado">
+  <nav class="menu-integrado" aria-label="Menu principal">
 
-<div class="logo">
-<img src="images/logo.png" height="80">
-</div>
+    <div class="menu-lado menu-esquerdo">
+      <a href="index.html">Início</a>
+      <a href="index.html#produtos">Produtos</a>
+	  
+    </div>
 
-<nav>
+    <a href="#inicio" class="logo-central" aria-label="Sítio Rio Branco - Página inicial">
+      <img src="images/logo.png" alt="Logotipo do Sítio Rio Branco">
+    </a>
 
-<a href="index.html">Início</a>
-<a href="index.html#produtos">Produtos</a>
+    <div class="menu-lado menu-direito">
+      <a href="delivery.html">Delivery</a>
+      <a href="index.html#contato">Contato</a>
+    </div>
 
-</nav>
-
+  </nav>
 </header>
+
+
+
 
 <section class="pagamento">
 
@@ -202,7 +211,7 @@ function verificarCEP() {
                 "Mirassol",
                 "Bady Bassitt"
             ];
-			if(data.cep === '15075-345'){
+			if(data.cep === '15075-345'){ //cep unique 
 				resultado.innerText = `1 dia útil para o Condomínio Unique Felicità ✔️ Frete Grátis!`
 			}else if(cepsFree.includes(data.cep)){
 				resultado.innerText =

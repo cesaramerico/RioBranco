@@ -10,28 +10,134 @@ background:#fafafa;
 color:#333;
 }
 
-header{
+/* ===== MENU INTEGRADO AO LOGO ===== */
 
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:8px 8%;
-background:#2e7d32;
-color:white;
-
+.topo-integrado {
+    width: 100%;
+    background: linear-gradient(135deg, #1f3d1f, #3f6f2a);
+    padding: 10px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
 }
 
-nav a{
-
-margin-left:30px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-
+.menu-integrado {
+    max-width: 1180px;
+    margin: 0 auto;
+    min-height: 92px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 25px;
+    position: relative;
 }
 
-.logo img{
-height:100px;
+.menu-lado {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu-esquerdo {
+    justify-content: flex-end;
+}
+
+.menu-direito {
+    justify-content: flex-start;
+}
+
+.menu-integrado a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.25s ease;
+}
+
+.menu-integrado a:not(.logo-central)::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #ffc107;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-radius: 20px;
+    transition: 0.25s ease;
+}
+
+.menu-integrado a:not(.logo-central):hover {
+    color: #ffe082;
+}
+
+.menu-integrado a:not(.logo-central):hover::after {
+    width: 100%;
+}
+
+.logo-central {
+    width: 128px;
+    height: 128px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    border: 5px solid #f4d27a;
+    margin-bottom: -22px;
+    z-index: 2;
+}
+
+.logo-central img {
+    max-width: 133%;
+    max-height: 133%;
+    object-fit: contain;
+}
+
+/* Ajuste para o banner não ficar escondido atrás do logo */
+.hero {
+    padding-top: 80px;
+}
+
+/* ===== RESPONSIVO CELULAR ===== */
+
+@media (max-width: 768px) {
+    .topo-integrado {
+        padding: 12px 4%;
+    }
+
+    .menu-integrado {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .logo-central {
+        order: -1;
+        width: 105px;
+        height: 105px;
+        margin: 0 auto 5px;
+    }
+
+    .menu-lado {
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .menu-integrado a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding-top: 35px;
+    }
 }
 
 .hero{
@@ -453,4 +559,140 @@ cursor:pointer;
 
 .galeria img.ativa{
     opacity:1;
+}
+
+/* ===== CONTADOR DE PRODUTOS ===== */
+
+.contador-produto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 15px 20px 10px;
+}
+
+.contador-produto button {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: #2e7d32;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.contador-produto button:hover {
+    background: #1b5e20;
+    transform: scale(1.08);
+}
+
+.contador-produto .quantidade {
+    min-width: 35px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2e7d32;
+}
+
+/* ===== BOTÃO ADICIONAR AO CARRINHO ===== */
+
+.btn-carrinho {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px;
+    background: linear-gradient(135deg, #ff9800, #ff6d00);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-carrinho:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(255, 109, 0, 0.35);
+}
+
+/* ===== SEÇÃO CARRINHO ===== */
+
+.carrinho-section {
+    padding: 50px 8%;
+    background: #f7f3e8;
+    text-align: center;
+}
+
+.carrinho-section h2 {
+    font-size: 34px;
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+#lista-carrinho {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #eee;
+    padding: 14px 0;
+    text-align: left;
+}
+
+.item-carrinho:last-child {
+    border-bottom: none;
+}
+
+.item-carrinho strong {
+    color: #2e7d32;
+}
+
+.item-carrinho button {
+    background: #c62828;
+    color: white;
+    border: none;
+    padding: 8px 11px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.carrinho-vazio {
+    color: #777;
+    font-size: 16px;
+}
+
+.total-carrinho {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.btn-finalizar {
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 38px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-finalizar:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
 }
