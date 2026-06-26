@@ -150,6 +150,35 @@ alert("Chave PIX copiada!");
 
 <script>
 function verificarCEP() {
+	const cepsFree = ['15062-222',
+'15062-221',
+'15062-223',
+'15062-220',
+'15062-235',
+'15062-237',
+'15062-225',
+'15062-246',
+'15062-239',
+'15062-242',
+'15062-224',
+'15062-241',
+'15062-244',
+'15062-247',
+'15062-240',
+'15062-228',
+'15062-227',
+'15062-231',
+'15062-236',
+'15062-248',
+'15062-232',
+'15062-229',
+'15062-226',
+'15062-243',
+'15062-233',
+'15062-234',
+'15062-238',
+'15062-230']
+
     let cep = document.getElementById("cep").value.replace(/\D/g, "");
     let resultado = document.getElementById("resultado-cep");
 
@@ -173,11 +202,16 @@ function verificarCEP() {
                 "Mirassol",
                 "Bady Bassitt"
             ];
+			if(data.cep === '15075-345'){
+				resultado.innerText = `1 dia útil para o Condomínio Unique Felicità ✔️ Frete Grátis!`
+			}else if(cepsFree.includes(data.cep)){
+				resultado.innerText =
+			`1 dia útil para o Condomínio Recanto do Lago ✔️ Frete Grátis!`
+			
+			}else if (data.localidade === "São José do Rio Preto") {
 
-            if (data.localidade === "São José do Rio Preto") {
-
-    resultado.innerText =
-        `1 dia útil para ${data.logradouro} ✔️ R$20 Motoboy`;
+			resultado.innerText =
+			`1 dia útil para ${data.logradouro} ✔️ R$20 Motoboy`;
 
 } else if (data.localidade === "Mirassol") {
 
