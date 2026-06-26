@@ -696,3 +696,28 @@ cursor:pointer;
     background: #1ebe5d;
     transform: translateY(-2px);
 }
+
+/* Ajuste apenas da área das bandeiras do cartão */
+.opcao .bandeiras-cartao {
+    width: 100%;
+    margin: 12px 0 18px;
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* Ajuste da imagem das bandeiras */
+.opcao .bandeiras-cartao img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
