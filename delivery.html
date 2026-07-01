@@ -29,7 +29,11 @@
     </div>
 
     <a href="#inicio" class="logo-central" aria-label="Sítio Rio Branco - Página inicial">
-      <img src="images/logo.webp" alt="Logotipo do Sítio Rio Branco">
+      <img src="images/logo.webp"
+		 width="157"
+		 height="157"
+		 alt="Sítio Rio Branco"
+		 loading="eager">
     </a>
 
     <div class="menu-lado menu-direito">
@@ -160,14 +164,17 @@ alert("Chave PIX copiada!");
 
 
 <script>
-    const inputCEP = document.getElementById("cep");
+   
+ const inputCEP = document.getElementById("cep");
+    const botaoVerificar = document.getElementById("btn-verificar");
 
     inputCEP.addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            verificarCEP();
+            botaoVerificar.click();
         }
     });
+
 </script>
 
 
